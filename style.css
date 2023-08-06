@@ -1,0 +1,241 @@
+*,
+*::before,
+*a::after {
+    box-sizing: border-box;
+}
+
+
+/* margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+section {
+    padding: 4em 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 65em;
+}
+
+.split {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.split p,
+img,
+a {
+    flex-basis: 30%;
+    /* min-width: 15em;*/
+}
+
+.hero p {
+    margin-top: 4rem;
+    font-size: 30px;
+}
+
+.btn {
+    margin-left: 30px;
+    margin-top: 4rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-accent, #fff);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, rgb(48, 48, 129));
+    border: .25em;
+    transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.primary-title {
+    font-size: 4rem;
+    font-size: 70px;
+    /*!!!!*/
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 50px;
+    line-height: 1;
+    color: rgb(3, 3, 68);
+    margin-bottom: 5rem;
+}
+
+.hero {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    padding: 15em 0;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-image: linear-gradient(#16151525, #13214788), url(https://raw.githubusercontent.com/kevin-powell/shoes/master/img/shoe-3.png), radial-gradient(#444, #111);
+}
+
+.featured {
+    background: #eee;
+}
+
+.featured__item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out, opacity 250ms linear;
+    ;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+}
+
+span {
+    display: block;
+    font-weight: 1000;
+    font-size: 3.5rem;
+}
+
+.featured__item:hover,
+:focus {
+    transform: scale(1);
+}
+
+.featured__item:hover.featured__details,
+.featured__item:focus.featured__details {
+    opacity: 1;
+}
+
+.featured__item::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+    padding: 100% 100% 0 0;
+    background: rgb(55, 138, 206);
+}
+
+
+/*
+.featured__details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+}*/
+
+.product {
+    background: radial-gradient( limegreen, yellow);
+    padding: 3em 0;
+    border-radius: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.product__description {
+    padding-left: 30px;
+    font-weight: 400;
+}
+
+.product__title {
+    font-size: 4rem;
+    line-height: 1.1;
+    color: white;
+    text-shadow: 0 0 .2em rgba(rgb(0, 0, 0), 2);
+}
+
+.product.red {
+    background: rgb(248, 156, 51);
+}
+
+.product.white {
+    background: rgb(104, 212, 255);
+}
+
+.product.blue {
+    background: rgb(163, 253, 145);
+}
+
+@media (min-width: 45em) {
+    .product {
+        text-align: left;
+        margin-bottom: 9em;
+    }
+    .product__title {
+        margin: 0;
+    }
+    .product__image {
+        float: right;
+        width: 65%;
+        shape-outside: url(https://raw.githubusercontent.com/kevin-powell/shoes/master/img/shoe-1.png);
+        shape-margin: 1em;
+        margin: 0 -5em 0 0;
+    }
+    img.product__image.shoe-left {
+        float: left;
+        shape-outside: url(https://raw.githubusercontent.com/kevin-powell/shoes/master/img/shoe-2.png);
+        margin: 0 0 0 -5em;
+        shape-margin: 2em;
+    }
+}
+
+.footer {
+    display: block;
+    background-color: rgb(70, 69, 69);
+    bottom: 0;
+}
+
+.social {
+    margin-left: 38%;
+    margin-bottom: 0;
+}
+
+.social li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    filter: invert(1);
+    transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.social li:hover {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+}
